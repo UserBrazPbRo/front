@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <script src="formulario.js" defer></script>
+    <title>Feedback Direto</title>
+</head>
+<body>
+    <main class="container">
+        <header><h1>Feedback Direto</h1></header>
+        
+        <form id="feedbackForm" action="#" method="post">
+                <!-- Selecionar a agência -->
+                <section>
+                    <h2>Selecione sua agência</h2>
+                    <label for="p1"></label>
+                    <select name="agencia" id="p1" required>
+                        <option value="" disabled selected>Selecione sua Agência</option>
+                        <option value="">	1	Pimenta Bueno	</option>
+                        <option value="">	2	Alta Floresta	</option>
+                        <option value="">	3	São Felipe D'Oeste	</option>
+                        <option value="">	4	Espigão D'Oeste	</option>
+                        <option value="">	5	Seringueiras	</option>
+                        <option value="">	6	Alto Alegre	</option>
+                        <option value="">	7	Chupinguaia	</option>
+                        <option value="">	8	Parecis	</option>
+                        <option value="">	9	Rolim de Moura	</option>
+                        <option value="">	10	São Francisco	</option>
+                        <option value="">	11	São Miguel	</option>
+                        <option value="">	12	Alvorada do Oeste	</option>
+                        <option value="">	13	Santa Luzia	</option>
+                        <option value="">	14	Cacoal	</option>
+                        <option value="">	15	Nova Brasilândia	</option>
+                        <option value="">	16	São Domingos	</option>
+                        <option value="">	17	Migrantinópolis	</option>
+                        <option value="">	18	Novo Horizonte	</option>
+                        <option value="">	19	Ministro Andreazza	</option>
+                        <option value="">	20	Primavera	</option>
+                        <option value="">	21	Costa Marques	</option>
+                        <option value="">	22	Novo Plano	</option>
+                        <option value="">	23	Seringal	</option>
+                        <option value="">	24	Matupi	</option>
+                        <option value="">	25	Apuí	</option>
+                        <option value="">	26	Castanheiras	</option>
+                        <option value="">	27	NOVO CACOAL	</option>
+                        <option value="">	28	Colniza	</option>
+                        <option value="">	29	Conselva	</option>
+                        <option value="">	30	Cacoal Shopping	</option>
+                        <option value="">	31	Juara	</option>
+                        <option value="">	32	Juaruena	</option>
+                        <option value="">	33	Cotriguaçu	</option>
+                        <option value="">	34	Rondolândia	</option>
+                        <option value="">	35	Nova Bandeirantes	</option>
+                        <option value="">	36	Aripuanã	</option>
+                        <option value="">	37	Nova União	</option>
+                        <option value="">	38	Nova Monte Verde	</option>
+                        <option value="">	39	Apiacás	</option>
+                        <option value="">	40	Guariba	</option>
+                        <option value="">	41	Teixeirão	</option>
+                        <option value="">	42	Tabaporã	</option>
+                        <option value="">	43	Porto dos Gaúchos	</option>
+                        <option value="">	44	Novo Horizonte	</option>
+                        <option value="">	45	Brianorte	</option>
+                        <option value="">	46	Nova Maringá	</option>
+                        <option value="">	47	Cacoal Vista Alegre	</option>
+                        <option value="">	97	Digital	</option>
+                    </select>
+                </section>
+    
+                <!-- Categoria do problema -->
+                <section>
+                    <h2>Selecione a razão do seu feedback:</h2>
+                    <label for="p2"></label>
+                    <select name="categoria" id="p2" required>
+                        <option value="" disabled selected>Selecione a Categoria</option>
+                        <optgroup label="Atendimento"></option>
+                        <option value="1.1"> - Demora no atendimento </option>
+                        <option value="1.2"> - Falta de caixas disponíveis </option>
+                        <option value="1.3"> - Atendimento pouco cordial/falta de educação </option>
+                        <option value="1.4"> - Dificuldade para falar com gerente </option>
+                        <option value="1.5"> - Falta de acessibilidade para PCDs </option>
+                        <optgroup label=" Serviços"></option>
+                        <option value="2.1"> - Problemas com abertura de contas </option>
+                        <option value="2.2"> - Dificuldade para resolver problemas simples </option>
+                        <option value="2.3"> - Falta de equipamentos (como terminais de autoatendimento) </option>
+                        <option value="2.4"> - Limitação de horário de funcionamento </option>
+                        <option value="2.5"> - Cobrança indevida de taxas </option>
+                        <optgroup label="Infraestrutura"></option>
+                        <option value="3.1"> - Falta de higiene/limpeza </option>
+                        <option value="3.2"> - Má conservação do espaço </option>
+                        <option value="3.3"> - Falta de privacidade no atendimento </option>
+                        <option value="3.4"> - Poucas cadeiras para espera </option>
+                        <option value="3.5"> - Problemas com ar-condicionado/ventilação </option>
+                        <optgroup label="Problemas Técnicos"> </option>
+                        <option value="4.1"> - Sistema fora do ar com frequência </option>
+                        <option value="4.2"> - Depósitos não creditados </option>
+                        <option value="4.3"> - Transferências não realizadas </option>
+                        <option value="4.4"> - Extratos com divergências </option>
+                        <option value="4.4"> - Pagamentos duplicados </option>
+                        <optgroup label="Sugestões"></option>
+                        <option value="5.1">Sugestões de Melhoria</option>
+                        <option value="6">Outros</option>
+                    </select>
+                </section>
+    <!-- Reclamação -->
+    <section>
+        <h2>Informe seu feedback:</h2>
+        <label for="p3"></label>
+        <textarea id="p3" name="reclamação" placeholder="Digite sua sugestão, reclamação ou crítica..." rows="5" required></textarea>
+    </section>
+    <!--Dados-->
+    <section>
+        <h2>Adicione seus dados para receber atualizações do seu reporte</h2>
+        <div class="campo">
+            <h2>E-mail:</h2>
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com">
+            <span id="emailError" class="error-message"></span>
+        </div>
+        
+        <div class="campo">
+            <h2>CPF:</h2>
+            <label for="cpf"></label>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14">
+            <span id="cpfError" class="error-message"></span>
+        </div>
+    </section>
+    
+    <!-- Termos de uso-->
+    <section>
+        <div class="termos-uso">
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos"><h3>Eu li e concordo com os <a href="https://www.sicoob.com.br/documents/20128/33422236/Termos+de+Uso+-+Novo+Sicoobnet.pdf" target="_blank">termos de uso</h3></a></label>
+            <span id="termosError" class="error-message"></span>
+        </div>
+    </section>
+    
+    <!-- Botão de Envio -->
+    <section>
+        <button type="submit">Enviar</button>
+    </section>
+</form>
+</main>
+</body>
+</html>

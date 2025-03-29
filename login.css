@@ -1,0 +1,121 @@
+:root {
+    --cor-fundo: #ffffff;
+    --cor-texto: #004553 ;
+    --cor-destaque: #004553;
+    --cor-detalhe: #004553;
+    --cor-oposta: #24c8bd;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-fundo: black;
+        --cor-texto: #24c8bd;
+        --cor-destaque: #24c8bd;
+        --cor-detalhe: #24c8bd;
+        --cor-oposta: black;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    color: var(--cor-texto)
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/assets/texture-2407282.jpg');
+    background-size: cover;
+    background-position: center;
+}
+    
+.container {
+    width: 90%; 
+    max-width: 450px;
+    min-width: 300px;
+    background-color: var(--cor-fundo);
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin: 1rem; 
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem; 
+        border-radius: 15px; 
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 1.25rem;
+        min-width: unset; /* Permite adaptação total */
+        width: 100%;
+        margin: 0.5rem;
+        border-radius: 10px;
+    }
+}
+
+.container h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--cor-destaque);
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin: 25px 0;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid var(--cor-detalhe);
+    border-radius: 40px;
+    outline: none;
+    color: var(--cor-texto);
+    padding: 20px 50px 20px 25px;
+    font-size: 1rem;
+}
+
+.input-box input::placeholder{
+    color: var(--cor-detalhe);
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--cor-detalhe);
+}
+
+.login {
+    width: 100%;
+    height: 50px;
+    background-color: var(--cor-destaque);
+    border:  2px solid var(--cor-destaque);;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--cor-fundo);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+.login:hover{
+    background-color: var(--cor-fundo);
+    color: var(--cor-destaque);
+    transition: 0.5s;
+}

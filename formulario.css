@@ -1,0 +1,212 @@
+:root {
+    --cor-fundo: azure;
+    --cor-texto: #000000;
+    --cor-destaque: #004553;
+    --cor-detalhe: #ccc;
+    --cor-erro: #ff0000;
+    --cor-sucesso: #008000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-fundo: rgb(0, 11, 11);
+        --cor-texto: azure;
+        --cor-destaque: #24c8bd;
+        --cor-detalhe: #15323d;
+        --cor-erro: #ff6b6b;
+        --cor-sucesso: #4CAF50;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    color: var(--cor-texto);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #004553;
+    background-position: center;
+    padding: 20px; 
+}
+
+.container {
+    width: 100%;
+    max-width: 600px; 
+    background-color: var(--cor-fundo);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--cor-destaque);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+section h3 {
+    color: var(--cor-texto); 
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--cor-destaque);
+}
+
+input[type="checkbox"] {
+    border: 1px solid var(--cor-detalhe);   
+}
+
+select, 
+input[type="text"], 
+input[type="email"], 
+input[type="cpf"] {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-detalhe);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: var(--cor-fundo);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-detalhe);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: var(--cor-fundo);
+    resize: vertical; 
+    min-height: 100px; 
+}
+
+textarea:focus {
+    border-color: var(--cor-destaque);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 69, 83, 0.5);
+}
+
+select:focus, 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="cpf"]:focus {
+    cursor: pointer;
+    border-color: var(--cor-destaque);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 69, 83, 0.5);
+}
+
+/* Estilos para validação */
+.error-message {
+    color: var(--cor-erro);
+    font-size: 0.8em;
+    margin-top: 4px;
+    display: block;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+input.invalido,
+select.invalido,
+textarea.invalido {
+    border: 2px solid var(--cor-erro);
+    background-color: var(--cor-fundo);
+}
+
+input.valido,
+select.valido,
+textarea.valido {
+    border: 2px solid var(--cor-sucesso);
+}
+
+/* Estilos do botão de submit */
+input[type="submit"],
+button[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #004553;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #004553;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: aqua;
+    transition: 0.5s;
+}
+
+/* Estilos para termos de uso */
+.termos-uso {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.termos-uso label {
+    margin-left: 10px;
+    font-weight: normal;
+    color: var(--cor-texto);
+}
+
+.termos-uso a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+
+.termos-uso a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    section h2 {
+        font-size: 16px;
+    }
+
+    input[type="submit"],
+    button[type="submit"] {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
