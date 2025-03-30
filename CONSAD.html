@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel do CONSAD - Respostas do Formulário</title>
+    <title>Painel do Delegado - Respostas do Formulário</title>
     <link rel="stylesheet" href="delegado.css">
     <a href="/logout" onclick="return confirm('Tem certeza que deseja sair?')">Sair</a>
 </head>
 <body>
     <div class="container">
-        <h1>Painel de Respostas do Formulário</h1>
+        <h1>Painel de Acompanhamento de Sugestões</h1>
         
         <div class="filters">
             <div class="filter-group">
@@ -61,28 +61,20 @@
                 <div class="response-header">
                     <span class="response-id">ID: #12345</span>
                     <span class="response-date">Enviado em: 15/05/2023 14:30</span>
-                    <span class="status status-pending">PENDENTE</span>
+                    <span class="status status-pending">Pré-Aprovado</span>
                 </div>
                 
                 <div class="response-content">
                     <div class="response-field">
-                        <span class="field-label">Nome:</span>
-                        <span class="field-value">João da Silva</span>
+                        <span class="field-label">CPF:</span>
+                        <span class="field-value">000.000.000-00</span>
                     </div>
                     <div class="response-field">
                         <span class="field-label">E-mail:</span>
                         <span class="field-value">joao@exemplo.com</span>
                     </div>
                     <div class="response-field">
-                        <span class="field-label">Telefone:</span>
-                        <span class="field-value">(11) 98765-4321</span>
-                    </div>
-                    <div class="response-field">
-                        <span class="field-label">Nível de satisfação:</span>
-                        <span class="field-value">4 (de 1 a 5)</span>
-                    </div>
-                    <div class="response-field">
-                        <span class="field-label">Comentários:</span>
+                        <span class="field-label">Descrição:</span>
                         <span class="field-value">O produto atendeu minhas expectativas, porém a entrega poderia ser mais rápida.</span>
                     </div>
                 </div>
@@ -90,11 +82,8 @@
                 <div class="classification">
                     <label for="status-12345">Classificação:</label>
                     <select id="status-12345" class="status-select">
-                        <option value="all">Todos</option>
-                        <option value="pendente">Pendente</option>
                         <option value="rejeitado">Rejeitado</option>
                         <option value="aprovado">Aprovado</option>
-                        <option value="pre-aprovado">Pré-Aprovado</option>
                         <option value="finalizado">Finalizado</option>
                     </select>
                     
@@ -115,23 +104,15 @@
                 
                 <div class="response-content">
                     <div class="response-field">
-                        <span class="field-label">Nome:</span>
-                        <span class="field-value">Maria Oliveira</span>
+                        <span class="field-label">CPF:</span>
+                        <span class="field-value">000.000.000-00</span>
                     </div>
                     <div class="response-field">
                         <span class="field-label">E-mail:</span>
                         <span class="field-value">maria@exemplo.com</span>
                     </div>
                     <div class="response-field">
-                        <span class="field-label">Telefone:</span>
-                        <span class="field-value">(21) 99876-5432</span>
-                    </div>
-                    <div class="response-field">
-                        <span class="field-label">Nível de satisfação:</span>
-                        <span class="field-value">5 (de 1 a 5)</span>
-                    </div>
-                    <div class="response-field">
-                        <span class="field-label">Comentários:</span>
+                        <span class="field-label">Descrição:</span>
                         <span class="field-value">Excelente produto e atendimento! Recomendo a todos.</span>
                     </div>
                 </div>
@@ -139,11 +120,8 @@
                 <div class="classification">
                     <label for="status-12344">Classificação:</label>
                     <select id="status-12344" class="status-select">
-                        <option value="all">Todos</option>
-                        <option value="pendente">Pendente</option>
                         <option value="rejeitado">Rejeitado</option>
                         <option value="aprovado">Aprovado</option>
-                        <option value="pre-aprovado">Pré-Aprovado</option>
                         <option value="finalizado">Finalizado</option>
                     </select>
                     
@@ -153,14 +131,6 @@
                     <button type="button" class="save-btn" style="width: auto; margin-left: 15px;" data-response-id="12344">Salvar</button>
                 </div>
             </div>
-        </div>
-        
-        <div class="pagination">
-            <button type="button">&laquo; Anterior</button>
-            <button type="button">1</button>
-            <button type="button" class="active">2</button>
-            <button type="button">3</button>
-            <button type="button">Próximo &raquo;</button>
         </div>
     </div>
 </body>
