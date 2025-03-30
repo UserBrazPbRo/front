@@ -1,0 +1,185 @@
+:root {
+    --cor-fundo: azure;
+    --cor-texto: #000000;
+    --cor-destaque: #004553;
+    --cor-detalhe: #ccc;
+    --cor-erro: #ff0000;
+    --cor-sucesso: #008000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-fundo: rgb(0, 11, 11);
+        --cor-texto: azure;
+        --cor-destaque: #24c8bd;
+        --cor-detalhe: #15323d;
+        --cor-erro: #ff6b6b;
+        --cor-sucesso: #4CAF50;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    color: var(--cor-texto);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #004553;
+    background-position: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--cor-fundo);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--cor-destaque);
+}
+
+fieldset {
+    border: 1px solid var(--cor-detalhe);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--cor-destaque);
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--cor-destaque);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-detalhe);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    background-color: var(--cor-fundo);
+    transition: border-color 0.3s;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--cor-destaque);
+}
+
+.checkbox-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.password-strength {
+    font-size: 0.8em;
+    color: var(--cor-destaque);
+    margin-top: 5px;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    background-color: var(--cor-destaque);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--cor-fundo);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--cor-fundo);
+    color: var(--cor-destaque);
+    border: 2px solid var(--cor-destaque);
+}
+
+.error-message {
+    color: var(--cor-erro);
+    font-size: 0.8em;
+    margin-top: 4px;
+    display: block;
+}
+
+input.invalido,
+select.invalido {
+    border: 2px solid var(--cor-erro);
+}
+
+input.valido,
+select.valido {
+    border: 2px solid var(--cor-sucesso);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    button[type="submit"] {
+        height: 45px;
+        font-size: 15px;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+    }
+}

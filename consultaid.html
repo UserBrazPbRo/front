@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Respostas</title>
+    <link rel="stylesheet" href="consultaid.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-header">
+            <h1>Acompanhamento</h1>
+        </div>
+        
+        <div class="filter">
+            <input type="text" id="search" placeholder="Buscar respostas...">
+            <button type="button" id="buscar">Buscar</button>
+        </div>
+        
+        <div class="responses-container">
+            <!-- Exemplo de resposta 1 -->
+            <div class="response-card">
+                <div class="response-header">
+                    <span class="response-id">ID: #12345</span>
+                    <span class="response-date">15/05/2023 14:30</span>
+                    <span class="status status-pending">PENDENTE</span>
+                </div>
+                
+                <div class="response-content">
+                    <div class="response-field">
+                        <span class="field-label">Nome</span>
+                        <span class="field-value">João da Silva</span>
+                    </div>
+                    <div class="response-field">
+                        <span class="field-label">E-mail</span>
+                        <span class="field-value">joao@exemplo.com</span>
+                    </div>
+                    <div class="response-field">
+                        <span class="field-label">Telefone</span>
+                        <span class="field-value">(11) 98765-4321</span>
+                    </div>
+                    <div class="response-field">
+                        <span class="field-label">Satisfação</span>
+                        <span class="field-value">4/5</span>
+                    </div>
+                </div>
+                
+                <div class="classification">
+                    <label for="status-12345">Status:</label>
+                    <select id="status-12345" class="status-select">
+                        <option value="pendente">Pendente</option>
+                        <option value="aprovado">Aprovado</option>
+                        <option value="rejeitado">Rejeitado</option>
+                    </select>
+                    
+                    <label for="notes-12345">Notas:</label>
+                    <input type="text" id="notes-12345" placeholder="Adicionar notas...">
+                </div>
+            </div>
+            
+            <!-- Mais respostas... -->
+        </div>
+        
+        <div class="pagination">
+            <button type="button">&laquo;</button>
+            <button type="button">1</button>
+            <button type="button" class="active">2</button>
+            <button type="button">3</button>
+            <button type="button">&raquo;</button>
+        </div>
+    </div>
+</body>
+</html>
